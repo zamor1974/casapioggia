@@ -112,10 +112,9 @@ definitions:
         x-go-name: Value
     type: object
     x-go-package: casapioggia/models
-host: 192.168.1.250:5555
 info:
   title: 'Rain Api:'
-  version: 0.0.3
+  version: 0.1.3
 paths:
   /lasthour:
     get:

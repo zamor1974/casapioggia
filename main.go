@@ -35,7 +35,7 @@ func main() {
 
 	http.Handle("/", r)
 	s := &http.Server{
-		Addr: fmt.Sprintf("%s:%s", "192.168.1.250", "5555"),
+		Addr: fmt.Sprintf("%s:%s", "", "5555"),
 	}
 	s.ListenAndServe()
 }
