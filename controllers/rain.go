@@ -94,7 +94,7 @@ func (h *BaseHandlerSqlx) GetRainsSqlx(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 }
 
-// swagger:route GET /lasthour listRain
+// swagger:route GET /lasthour lastHour
 // Get list of last hour of rain .... or the last value inserted
 //
 // security:
