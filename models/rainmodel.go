@@ -30,7 +30,7 @@ type ReqAddRain struct {
 	Value int `json:"valore" validate:"required"`
 }
 
-// swagger:parameters admin addRain
+// swagger:parameters addRain
 type ReqRainBody struct {
 	// - name: body
 	//  in: body
@@ -55,7 +55,7 @@ func ErrHandler(err error) string {
 
 func GetRainsSqlx(db *sql.DB) *Rains {
 	rains := Rains{}
-	rows, err := db.Query("SELECT id, valore, data_inserimento FROM pioggia")
+	rows, err := db.Query("SELECT id, valore, data_inserimento FROM pioggia order by id desc")
 	if err != nil {
 		log.Fatal(err)
 	}
