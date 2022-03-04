@@ -130,7 +130,6 @@ func PostRainSqlx(db *sql.DB, reqrain *ReqAddRain) (*Rain, string) {
 
 	//sqlStatement := fmt.Sprintf("insert into 'pioggia' ('valore','data_inserimento') values (%d,CURRENT_TIMESTAMP) RETURNING id", value)
 	sqlStatement := fmt.Sprintf("insert into pioggia (valore,data_inserimento) values (%d,CURRENT_TIMESTAMP) RETURNING id", value)
-	log.Println(sqlStatement)
 
 	err := db.QueryRow(sqlStatement).Scan(&lastInsertId)
 
